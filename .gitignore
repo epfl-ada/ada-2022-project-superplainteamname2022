@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+*.DS_Store
+*.DS_Store?
+.idea
+.vscode
+data/corenlp_plot_summaries
+data/corenlp_plot_summaries.tar

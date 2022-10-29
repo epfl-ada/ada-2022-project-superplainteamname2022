@@ -20,3 +20,5 @@ A list of internal milestones up until project Milestone P3.
 
 ## Questions for TAs (optional)
 Add here any questions you have for us related to the proposed project.
+
+Notebook containing initial analyses and data handling pipelines. We will grade the correctness, quality of code, and quality of textual descriptions.
