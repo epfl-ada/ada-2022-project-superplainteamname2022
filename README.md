@@ -18,10 +18,12 @@ More revenue data on
 https://www.boxofficemojo.com/chart/top_lifetime_gross/
 
 ## Methods
-### Latent Dirichlet Allocation (LDA) for topic modeling.
-####  (1) Excluding stop words and punctuations. \\
-####  (2) Tokenizing the sentence. \\
-####  (3) Delete name of person using NER.
+### 1. Latent Dirichlet Allocation (LDA) for topic modeling.
+    1.1 Text Cleaning
+    (1) Excluding stop words and punctuations. 
+    (2) Tokenizing the sentence. 
+    (3) Delete name of person using NER.
+
 ## Proposed timeline
 
 ## Organization within the team
