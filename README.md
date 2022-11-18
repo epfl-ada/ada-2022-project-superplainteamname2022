@@ -54,11 +54,11 @@ https://www.boxofficemojo.com/chart/top_lifetime_gross/
 ### 3. Build revenue relationship between top-selling movies and other movies in the same closed time period.
     
 ## Proposed timeline
--25.11 Enrich the revenue data with external sources, as listed in the additional dataset part. Revise the topic modeling and keyword extraction pipeline, tuning all the parameters to the best, including cluster number and topic number. 
--02.12 Perform actor-related analysis. Start genre-related and time-related analysis, and other-movie-related analysis.
--09.12 Start the development of website. Continue all analysis.
--16.12 First draft of datastory website. Finish all analysis. 
--23.12 Final version of datastory website. 
+- 25.11 Enrich the revenue data with external sources, as listed in the additional dataset part. Revise the topic modeling and keyword extraction pipeline, tuning all the parameters to the best, including cluster number and topic number. 
+- 02.12 Perform actor-related analysis. Start genre-related and time-related analysis, and other-movie-related analysis.
+- 09.12 Start the development of website. Continue all analysis.
+- 16.12 First draft of datastory website. Finish all analysis. 
+- 23.12 Final version of datastory website. 
 ## Organization within the team
 #### Yitao Xu: 
     (1) Topic modeling and analysis with LDA
