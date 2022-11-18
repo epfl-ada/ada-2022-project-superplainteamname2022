@@ -56,20 +56,20 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 1. Use K-Means to cluster all keyword vectors without supervision. Number of clusters need to be decided.
 2. Assign each movie to a keyword cluster using the distance between its keyword vector and the cluster center.
 
-#### 3 Qualitatively and quantitatively evaluate the average revenue in each topic & keyword group of movies. 
+### 3 Qualitatively and quantitatively evaluate the average revenue in each topic & keyword group of movies. 
 
 1. Qualitative results are visualized using bar plots. (Preliminary results can be seen in the notebook!)
 2. Quantitative results can be obtained via hypothesis testing or comparison between CI.
 3. Quantitative results visualization with heatmap.
 
-#### 4. Genre-related analysis of topics and keywords.
+### 4. Genre-related analysis of topics and keywords.
 
 1. Identify main genres using the frequency of each genre, or by clustering with genre word vectors.
 2. Group movies according to their genres (only use main genres).
 3. Extract top-selling and bad-selling topics & keywords in each main genres. 
 4. Visualize the result using word clouds. 
 
-#### 5. Time-related analysis of topics and keywords.
+### 5. Time-related analysis of topics and keywords.
 
 1. Discretize time into several periods (decades, five-year, annual, etc)
 2. Group movies according to their release time period.
