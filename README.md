@@ -97,8 +97,8 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 1. Compare the revenue of our selected movie with the average revenue of movies from its genres that are released in the same month of the previous year and the next year. 
 
 #### 7.3 Compare the revenue of our selected movies with its most similar movie
-1.   Computing Euclidean distance or cosine similarity between the word vector extracted in Part 1.
-2.   Merging the word vector and the other metadata of movies in a latent space and measured distance in that latent space.
+1.   Compute Euclidean distance or cosine similarity between the word vector extracted in Part 1.
+2.   Merge the word vector and the other metadata of movies in a latent space and measured distance in that latent space, where the latent space can be obtained via autoencoder.
 
 ## Proposed timeline
 
