@@ -78,7 +78,7 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 
 ### 6. For each topic group or keyword group of movie, extract the actors that earn the most or least.
 
-#### 6.1 Case study of an actor
+#### 6.1 Case study of actors with "specialty"
 
 1. Find the actors that have the highest average revenue (of movies that he/she is in) in one group but have the lowest in others. 
 2. Try to devise a reason for each actor with the situation described in (1).
