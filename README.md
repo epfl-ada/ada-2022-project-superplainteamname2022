@@ -90,7 +90,29 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 
 ### 7. Build revenue relationship between top-selling movies and other movies in the same closed time period.
 
-    
+#### 7.1 Definition of top-selling movies(top blockbusters)
+There is no quantitative definition about blockbuster given by the film industry. Therefore, we give a simple and clear definition of top blockbusters. We simply define them as the annual box office champions. However, based on their revenue, we can also refine the blockbusters to different levels(eg. With box office revenue higher than 1 billion,2 billion...)
+
+#### 7.2 Definition of movies released in a close period with the top blockbusters
+Given some empirical knowledge about the historical box office, we give a preliminary definition for movies released in a close period with the top blockbusters: Movies that are released in the same month with the top blockbusters are considered to be released in a close period.
+
+#### 7.3 Assumptions and analysis
+
+* We assume that top blockbusters have a negative influence on the revenues of movies released close to it. 
+* To prove our assumption, we wanna minimize the impact on revenues due to those movies' own quality. Although film producers may not agree that box office revenue is an ideal indication of movie quality, we as data scientists, will still make a naive assumption that high box office revenue always means high quality. Therefore, our analysis will be mainly conducted on the median of revenue of those movies released close to the top blockbuster since extremely low revenue may be mainly caused by the movie's own quality, making the blockbuster's effect neglectable while high quality movies could easily overpower this negative influence.(Another movie released in the same month with the annual blockbuster might have just a slightly lower revenue. eg. *Avengers: Age of Ultron* and *Furious 7*)
+
+#### 7.4 Rule out the influence of released months
+*   Hordes of film analysts, more often than not, tend to believe that movies released in different time of the year, even with close topic or genres, have considerably different possibility to reach a high revenue. One classic argument is that movies released between Halloween and Christmas have a much higher chance to get higher revenue than movie released during spring(March,April). One can easily finds tons of examples.(eg. *Frozen* vs *Monsters University*, *Spider-Man: No Way Home* vs *Black Widow*) 
+*   To defende out assumption against this potential influence, we also compare the revenue of our selected movie with the average revenue of movies from its genres that are released in the same month of the previous year and the next year. For example, since our selected movie *Rabbit without ears 2* is released in Dec,2009. We will compare its revenue to movies with the same genre that are released in Dec,2008 and Dec,2010
+
+#### 7.5 Beyond genres
+
+The analysis based on genres provides us with an intuitive demonstration of blockbusters' influence. However, even movies within the same genre could be extremely different(*Divergent* vs *The Hunger Games*). Therefore, we need a more precise way measure the similarity between movies in order to compare the revenue of our selected movies with its most similar movie that is not affected by any blockbuster. Currently, we have two ideas:
+
+1.   Computing Euclidean distance or cosine similarity between the word vector extracted in Part 1.
+2.   Merging the word vector and the other metadata of movies in a latent space and measured distance in that latent space.
+
+However, the final choice and more detailed implementation will need more discussion.
 
 ## Proposed timeline
 
