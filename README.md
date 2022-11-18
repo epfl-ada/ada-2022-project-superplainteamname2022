@@ -58,7 +58,7 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 
 ### 3 Qualitatively and quantitatively evaluate the average revenue in each topic & keyword group of movies. 
 
-1. Qualitative results are visualized using bar plots. (Preliminary results can be seen in the notebook!)
+1. Qualitative results are visualized using bar plots. 
 2. Quantitative results can be obtained via hypothesis testing or comparison between CI.
 3. Quantitative results visualization with heatmap.
 
@@ -71,7 +71,7 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 
 ### 5. Time-related analysis of topics and keywords.
 
-1. Discretize time into several periods (decades, five-year, annual, etc)
+1. Discretize time into several periods (decades, five-year, etc)
 2. Group movies according to their release time period.
 3. In each time period, find the top-selling and bad-selling topics & keywords.
 4. Visualize the result using word clouds. 
