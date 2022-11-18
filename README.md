@@ -26,7 +26,7 @@ https://www.boxofficemojo.com/chart/top_lifetime_gross/
 #### 1.2 Creating the model
     (1) Use the LdaMulticore class in gensim to speed up modeling.
     (2) Select the best "number of topics" using coherence score. (gensim.models.coherencemodel)
-    (3) Assign each movie to one topic with the highest probability or combine multiple topics, weighted by the probability of the movie belonging to this topic.
+    (3) Assign each movie to one topic with the highest probability or combine multiple topics, weighted by the probability of the movie belonging to this topic. 
 ### 2. Keywords extraction of each movie plot.
 #### 2.1 Creating the model for keyword extraction
     (1) Use KeyBERT for the extraction.
@@ -37,21 +37,30 @@ https://www.boxofficemojo.com/chart/top_lifetime_gross/
     (2) Sum over all keywords vectors of one movie plot (here it can be weighted by the probability or not weighted). Only pick the word with a probability higher than a fixed value (needs to be decided).
 #### 2.3 Grouping the keyword vectors
     (1) Use K-Means to cluster all keyword vectors without supervision. Number of clusters need to be decided.
-    (2) 
+    (2) Assign each movie to a keyword cluster using the distance between its keyword vector and the cluster center.
 
-#### 1.3 Qualitatively and quantitatively evaluate the average revenue in each topic & keyword group of movies. 
+#### 3 Qualitatively and quantitatively evaluate the average revenue in each topic & keyword group of movies. 
     (1) Qualitative results are visualized using bar plots. (Preliminary results can be seen in the notebook!)
     (2) Quantitative results can be obtained via hypothesis testing or comparison between CI.
     (3) Quantitative results visualization with heatmap.
-#### 1.4
-### 2. For each topic group or keyword group of movie, extract the actors that earn the most or least.
-#### 2.1 Case study of an actor
+#### 4. Genre-related analysis of topics and keywords.
+    (1) Identify main genres using the frequency of each genre, or by clustering with genre word vectors.
+    (2) Group movies according to their genres (only use main genres).
+    (3) Extract top-selling and bad-selling topics & keywords in each main genres. 
+    (4) Visualize the result using word clouds. 
+#### 5. Time-related analysis of topics and keywords.
+    (1) Discretize time into several periods (decades, five-year, annual, etc)
+    (2) Group movies according to their release time period.
+    (3) In each time period, find the top-selling and bad-selling topics & keywords.
+    (4) Visualize the result using word clouds. 
+### 6. For each topic group or keyword group of movie, extract the actors that earn the most or least.
+#### 6.1 Case study of an actor
      (1) Find the actors that have the highest average revenue (of movies that he/she is in) in one group but have the lowest in others. 
      (2) Try to devise a reason for each actor with the situation described in (1).
-#### 2.2 Identify out-dated actor
+#### 6.2 Identify out-dated actor
     (1) Find the actors that have a decreasing trend of average revenue of movies that he/she is in. 
     (2) Correlate the change to the trend found in task 
-### 3. Build revenue relationship between top-selling movies and other movies in the same closed time period.
+### 7. Build revenue relationship between top-selling movies and other movies in the same closed time period.
     
 ## Proposed timeline
 - 25.11 Enrich the revenue data with external sources, as listed in the additional dataset part. Revise the topic modeling and keyword extraction pipeline, tuning all the parameters to the best, including cluster number and topic number. 
