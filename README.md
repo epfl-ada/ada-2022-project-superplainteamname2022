@@ -133,3 +133,4 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 - Develop the final text for the data story
 
 ## Questions for TAs (optional)
+1. Is the number of data points sufficient to make conclusion, at least on an overall level (no genre split or time-related analysis) ?
