@@ -43,13 +43,12 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 #### 2.1 Creating the model for keyword extraction
 
 1. Use KeyBERT for the extraction.
-2. Use "all-MiniLM-L6-v2", as it is claimed to be the best model for English text.
-3. For a paragraph of text, the model can give the keywords with probability. 
+2. For a paragraph of text, the model can give the keywords with probability. 
 
 #### 2.2 Creating keyword vector for each movie plot
 
 1. Load Global Vectors for Word Representation (GloVe) for word vectors. Use the 100d version with 400000 vocabulary. 
-2. Sum over all keywords vectors of one movie plot (here it can be weighted by the probability or not weighted). Only pick the word with a probability higher than a fixed value (needs to be decided).
+2. Sum over all keywords vectors of one movie plot, weighted by probability. Only pick the word with a probability higher than a fixed value (needs to be decided).
 
 #### 2.3 Grouping the keyword vectors
 
@@ -74,7 +73,6 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 1. Discretize time into several periods (decades, five-year, etc)
 2. Group movies according to their release time period.
 3. In each time period, find the top-selling and bad-selling topics & keywords.
-4. Visualize the result using word clouds. 
 
 ### 6. For each topic group or keyword group of movie, extract the actors that earn the most or least.
 
@@ -83,10 +81,10 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 1. Find the actors that have the highest average revenue (of movies that he/she is in) in one group but have the lowest in others. 
 2. Try to devise a reason for each actor with the situation described in (1).
 
-#### 6.2 Identify out-dated actor
+#### 6.2 Identify out-dated actors
 
 1. Find the actors that have a decreasing trend of average revenue of movies that he/she is in. 
-2. Correlate the change to the trend found in task 
+2. Correlate the change to the trend found in task 5.
 
 ### 7. Build revenue relationship between top-selling movies and other movies in the same closed time period.
 
@@ -103,9 +101,9 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 ## Proposed timeline
 
 - 25.11 Enrich the revenue data with external sources, as listed in the additional dataset part. Revise the topic modeling and keyword extraction pipeline, tuning all the parameters to the best, including cluster number and topic number. 
-- 02.12 Perform actor-related analysis. Start genre-related and time-related analysis, and other-movie-related analysis.
-- 09.12 Start the development of website. Continue all analysis.
-- 16.12 First draft of datastory website. Finish all analysis. 
+- 02.12 Perform actor-related analysis. Start genre-related and time-related analysis, and task 7.
+- 09.12 Start the development of website. Continue analysis.
+- 16.12 First draft of datastory website. Finish analysis. 
 - 23.12 Final version of datastory website. 
 
 ## Organization within the team
