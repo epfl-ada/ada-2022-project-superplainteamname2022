@@ -104,19 +104,24 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 
 #### Yitao Xu: 
 
-1. Topic modeling and analysis with LDA
-2. Keyword extraction and analysis with KeyBERT
-3. Genre-related analysis with topics and keywords.
+- Topic modeling and analysis with LDA
+- Keyword extraction and analysis with KeyBERT
+- Genre-related analysis with topics and keywords.
 
 #### Jianting Guo:
 
+- Time related analysis with topics and keywords
+- Develop the final text for the data story
+
 #### Tianxiao Shen:
+
+- Continue exploring the dataset and enrich the revenue data with external sources
+- Come up with meaningful visualizations
+- Develop the website
 
 #### Zehao Chen:
 
-time related analysis with topics and keywords, 
-actor analysis
-other movie analysis
-website
+- Actor-related analysis and other movie analysis
+- Develop the final text for the data story
 
 ## Questions for TAs (optional)
