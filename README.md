@@ -2,6 +2,8 @@
 
 What is affecting movies' box office revenue? An analysis of movies themselves and external factors.
 
+## Data Story is [HERE](https://epfl-ada.github.io/ada-2022-project-superplainteamname2022/)
+
 ## Abstract
 
 The box office revenue of a movie can be affected by multiple factors. Internal factors such as plots and actors as well as external factors like other movies released in the same period can have a large impact on a movie's revenue. Studying the effect of plots, actors, and same-period movies on the revenue of movies can shed light on what movies should filmmakers make if they want to earn more. In this project, we first investigate what topics and keywords do those blockbusters have in their plots to show the effect of movie plots. Then we try to find certain actors that can bring more money to a certain kind of movies but can potentially doom the revenue of other kinds of movies. Finally, we will show the effect of other top-selling movies on movies in the same period.
