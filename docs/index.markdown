@@ -20,16 +20,22 @@ Plot is one of the most important elements of a good movie. A good plot can make
 
 ### 1.1 What are the topics in those movies?
 
-We first use topic modeling to extract topics from movie plots and visualize the top 15 weighted words in each topic. 
+We first use topic modeling to extract 25 topics from movie plots and visualize the top 15 weighted words in each topic. 
 <img src="./images/topic_vis.png" alt="Coherence score: 0.3452" width="700" height="700" style="vertical-align:middle">
 Topics are different from each other. For example, topic 13 contains some negative words like "kill, destroy, attack" (`Iron Man` is in this topic) while topic 5 contains some postive words like "marry, love, life, familiy" (`Mamma Mia!` is in this topic). 
 
 ### 1.2 Is the movie revenue in each topic group different from each other?
 
-To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group. 
-<img src="./images/topic_revenue_average.png" alt="Error bar: 95 CI" width="400" height="400" style="vertical-align:middle">
-<img src="./images/heatmap_topic_id.png" alt="All differences are significant (p<0.05)" width="400" height="400" style="vertical-align:middle">
-Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compact CIs than topic 4. Looking at topics 13 and 18, they are all about "kill, fight, attack, destroy, escape", and all of them are events that we rarely encounter in our daily life. We assume that people are willing to buy tickets for those kinds of movies because 1) Routine life sometimes is boring and people needs some excitement, and 2) The development of special effects creation in cinemagraphs make the expressiveness of those kinds of movies increase a lot while barely changing the movies with topics 15, 1, which are narrative movies about "interview" (topic 15) or "story" (topic 1). The two reasons can also explain why the aforementioned two topics, 15 & 1, have bad sales in average.
+To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. 
+
+<center>
+    <img src="./images/topic_revenue_average.png" alt="Error bar: 95 CI" width="400" height="400" style="vertical-align:middle">
+    <img src="./images/heatmap_topic_id.png" alt="All differences are significant (p<0.05)" width="400" height="400" style="vertical-align:middle">
+</center>
+
+Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compact CIs than topic 4. Looking at topics 13 and 18, they are all about "kill, fight, attack, destroy, escape", and all of them are events that we rarely encounter in our daily life. We assume that people are willing to buy tickets for those kinds of movies because 1) Routine life sometimes is boring and people needs some excitement, and 2) The development of special effects creation in cinemagraphs make the expressiveness of those kinds of movies increase a lot while barely changing the movies with topics 15, 1, which are narrative movies about "interview" (topic 15) or "story" (topic 1). The two reasons can also explain why the aforementioned two topics, 15 & 1, have bad sales in average. 
+
+***Tips for filmmaker: Want to make more money? First make sure your movie topic is related to "kill, fight, attack, destroy, escape"!***
 
 <video width="320" height="240" controls>
   <source src="./images/keyword.mp4" type="video/mp4">
