@@ -27,7 +27,9 @@ Plot is one of the most important elements of a good movie. A good plot can make
 
 We first use topic modeling to extract 25 topics from movie plots and visualize the top 15 weighted words as a wordcloud in each topic. 
 
-<img src="./images/topic_vis.png" alt="Coherence score: 0.3452" width="700" height="700" style="vertical-align:middle">
+<center>
+  <img src="./images/topic_vis.png" alt="Coherence score: 0.3452" width="700" height="700" style="vertical-align:middle">
+</center>
 
 Topics are different from each other. For example, topic 13 contains some negative words like "kill, destroy, attack" (`Iron Man` is in this topic) while topic 5 contains some postive words like "marry, love, life, familiy" (`Mamma Mia!` is in this topic). 
 
@@ -35,14 +37,21 @@ Topics are different from each other. For example, topic 13 contains some negati
 
 To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. 
 
-<figure>
-  <center>
-    <img src="./images/topic_revenue_average.png" alt="Error bar: 95 CI" width=200 height=200>
-    <figcaption>Error bar: 95 CI.</figcaption>
-    <img src="./images/heatmap_topic_id.png" alt="All differences are significant (p<0.05)"  width=200 height=200>
-    <figcaption>All differences are significant (p &lt; 0.05).</figcaption>
-  </center>
-</figure>
+
+<div>
+    <figure>
+        <img src="./images/topic_revenue_average.png">
+        <figcaption>Error bar: 95 CI.</figcaption>
+    </figure>
+</div>
+<div>
+    <figure>
+        <img src="./images/heatmap_topic_id.png">
+        <figcaption>All differences are significant (p &lt; 0.05).</figcaption>]
+    </figure>
+</div>
+
+
 
 Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compact CIs than topic 4. Looking at topics 13 and 18, they are all about "kill, fight, attack, destroy, escape", and all of them are events that we rarely encounter in our daily life. We assume that people are willing to buy tickets for those kinds of movies because 1) Routine life sometimes is boring and people needs some excitement, and 2) The development of special effects creation in cinemagraphs make the expressiveness of those kinds of movies increase a lot while barely changing the movies with topics 15, 1, which are narrative movies about "interview" (topic 15) or "story" (topic 1). The two reasons can also explain why the aforementioned two topics, 15 & 1, have bad sales in average. 
 
@@ -62,13 +71,19 @@ Clear patterns can be seen from clusters of KeySum, supporting our claim that ke
 
 <figure>
   <center>
-    <img src="./images/topic_in_keyword.png" width="600" height="600" style="vertical-align:middle">
+    <img src="./images/topic_in_keyword.png" width="800" height="600" style="vertical-align:middle">
   </center>
 </figure>
 
 Different topics appear in the same keyword cluster, supporting our seperated analysis on both topics and keywords. Moreover, it shows that topics and keywords are indeed two perspectives of viewing the movie plots.
 
-We also visualize 15 top-frequent tokens in each keyword cluster. 
+We also visualize 15 top-frequent tokens in each keyword cluster, similar to the visualization of topics, to look into each cluster of what words are in it. 
+
+<center>
+  <img src="./images/keyword_vis.png" alt="" width="700" height="700" style="vertical-align:middle">
+</center>
+
+The frequent word in topic modeling, such as "kill, "
 
 <video width="320" height="240" controls>
   <source src="./images/topic.mp4" type="video/mp4">
