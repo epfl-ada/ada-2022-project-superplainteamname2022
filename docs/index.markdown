@@ -37,11 +37,9 @@ To see whether the revenue of movies can be affected by its topic, we first visu
 
 <figure>
   <center>
-    <img src="./images/topic_revenue_average.png" alt="Error bar: 95 CI" style="width:50%">
+    <img src="./images/topic_revenue_average.png" alt="Error bar: 95 CI" width=200 height=200>
     <figcaption>Error bar: 95 CI.</figcaption>
-  </center>
-  <center>
-    <img src="./images/heatmap_topic_id.png" alt="All differences are significant (p<0.05)" style="width:50%">
+    <img src="./images/heatmap_topic_id.png" alt="All differences are significant (p<0.05)"  width=200 height=200>
     <figcaption>All differences are significant (p &lt; 0.05).</figcaption>
   </center>
 </figure>
@@ -54,7 +52,15 @@ Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compac
 
 While topics provide a top-down view of all movie plots, it remains unclear whether we can group movie plots in a bottom-up manner, namely first looking at the important information in each movie plot and then trying to identify patterns in the collected important information. First, we define the **important information** in movie plots as **keywords**. We use KeyBERT to extract all unigram, bigram, and trigram keywords in each movie plot and turn each token in the extracted keywords into a pre-trained word vector. The sum of all keyword vectors then represents all the important information we summarize from a movie plot, defined as **KeySum**. We then use K-Means to cluster those KeySum into 17 clusters. Visualization of 10 of 17 KeySum clusters (to avoid clutter) is given below (reduce dimensionality to 2 for visualization using t-SNE). 
 
-Clear patterns can be seen from clusters of KeySum. 
+Clear patterns can be seen from clusters of KeySum, supporting our claim that keywords can be used for another method than topics for grouping movie plots. However, one subtle point could be that keyword clustering just repeat what topic modeling does. To eliminate this doubt, we visualize the distribution of topic id in each keyword cluster
+
+<figure>
+  <center>
+    <img src="./images/topic_in_keyword.png" width="600" height="600" style="vertical-align:middle">
+  </center>
+</figure>
+
+We also visualize 15 top-frequent tokens in each keyword cluster. 
 
 <video width="320" height="240" controls>
   <source src="./images/topic.mp4" type="video/mp4">
