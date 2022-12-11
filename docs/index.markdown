@@ -21,7 +21,7 @@ Plot is one of the most important elements of a good movie. A good plot can make
 ### 1.1 What are the topics in those movies?
 
 We first use topic modeling to extract topics from movie plots and visualize the top 15 weighted words in each topic. 
-<img src="./images/topic_vis.png" alt="Coherence score: 0.3452" width="800" height="800" style="vertical-align:middle">
+<img src="./images/topic_vis.png" alt="Coherence score: 0.3452" width="700" height="700" style="vertical-align:middle">
 Topics are different from each other. For example, topic 13 contains some negative words like "kill, destroy, attack" (`Iron Man` is in this topic) while topic 5 contains some postive words like "marry, love, life, familiy" (`Mamma Mia!` is in this topic). 
 
 ### 1.2 Is the movie revenue in each topic group different from each other?
