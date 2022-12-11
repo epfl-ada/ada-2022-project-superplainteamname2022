@@ -6,6 +6,12 @@ layout: default
 ## Overview
 
 The box office revenue of a movie is one of the most critical measurements of its success. The revenue of a movie can be affected by multiple factors.  Internal factors such as topic and keywords in movie plots and actors as well as external factors like other movies released in the same period can have a large impact on a movie's revenue. Studying the effect of plots, actors, and same-period movies on the revenue of movies can shed light on what movies should filmmakers make if they want to earn more, and can give an overview of the development of the movie industry. In this project, we first investigate what topics and keywords those blockbusters have in their plots to show the effect of movie plots. Then we try to find certain actors that can bring more money to a certain kind of movie but can potentially doom the revenue of other kinds of movies. Finally, we will show the effect of other top-selling movies on movies in the same period. 
+First, let's look at the overall annual average revenue of movies, to have a rough glance at the development movie industry.
+
+<img src="./images/Overall_average.png" alt="Figure 1. " width="500" height="500">
+
+From figure 1, we can see that the average annual revenue of the film industry has increased over time (good to hear this!), reflecting the thriving development of the film industry and the enhancement of people's purchasing power.
+
 
 ## Question 1: What do those blockbusters have in their plots?
 
