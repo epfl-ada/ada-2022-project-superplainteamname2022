@@ -47,7 +47,7 @@ To see whether the revenue of movies can be affected by its topic, we first visu
 <div>
     <figure>
         <img src="./images/heatmap_topic_id.png">
-        <figcaption>All differences are significant (p &lt; 0.05).</figcaption>]
+        <figcaption>All differences are significant (p &lt; 0.05).</figcaption>
     </figure>
 </div>
 
