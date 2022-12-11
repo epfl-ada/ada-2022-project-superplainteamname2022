@@ -52,6 +52,12 @@ Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compac
 
 While topics provide a top-down view of all movie plots, it remains unclear whether we can group movie plots in a bottom-up manner, namely first looking at the important information in each movie plot and then trying to identify patterns in the collected important information. First, we define the **important information** in movie plots as **keywords**. We use KeyBERT to extract all unigram, bigram, and trigram keywords in each movie plot and turn each token in the extracted keywords into a pre-trained word vector. The sum of all keyword vectors then represents all the important information we summarize from a movie plot, defined as **KeySum**. We then use K-Means to cluster those KeySum into 17 clusters. Visualization of 10 of 17 KeySum clusters (to avoid clutter) is given below (reduce dimensionality to 2 for visualization using t-SNE). 
 
+<figure>
+  <center>
+    <img src="./images/keyword_cluster_vis.png" width="600" height="600" style="vertical-align:middle">
+  </center>
+</figure>
+
 Clear patterns can be seen from clusters of KeySum, supporting our claim that keywords can be used for another method than topics for grouping movie plots. However, one subtle point could be that keyword clustering just repeat what topic modeling does. To eliminate this doubt, we visualize the distribution of topic id in each keyword cluster
 
 <figure>
@@ -59,6 +65,8 @@ Clear patterns can be seen from clusters of KeySum, supporting our claim that ke
     <img src="./images/topic_in_keyword.png" width="600" height="600" style="vertical-align:middle">
   </center>
 </figure>
+
+Different topics appear in the same keyword cluster, supporting our seperated analysis on both topics and keywords. Moreover, it shows that topics and keywords are indeed two perspectives of viewing the movie plots.
 
 We also visualize 15 top-frequent tokens in each keyword cluster. 
 
