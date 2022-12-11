@@ -10,3 +10,7 @@ The box office revenue of a movie is one of the most critical measurements of it
 ## Question 1: What do those blockbusters have in their plots?
 
 The plot is one of the most important elements of a good movie. A good plot can make the audience willing to buy a ticket, while a terrible one can doom a movie, no matter how cool the special effects are. We consider two perspectives to study the movie plots, namely topics and keywords. The topic is a top-down way of investigating the plots, looking at the overall frequency of words, namely bag-of-word modeling, while keywords are bottom-up manner, extracting information from a single movie plot and doing further grouping. 
+
+<video width="320" height="240" controls>
+  <source src="./images/keyword.mp4" type="video/mp4">
+</video>
