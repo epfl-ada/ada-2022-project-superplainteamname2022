@@ -8,9 +8,14 @@ layout: default
 The box office revenue of a movie is one of the most critical measurements of its success. The revenue of a movie can be affected by multiple factors.  Internal factors such as topic and keywords in movie plots and actors as well as external factors like other movies released in the same period can have a large impact on a movie's revenue. Studying the effect of plots, actors, and same-period movies on the revenue of movies can shed light on what movies should filmmakers make if they want to earn more, and can give an overview of the development of the movie industry. In this project, we first investigate what topics and keywords those blockbusters have in their plots to show the effect of movie plots. Then we try to find certain actors that can bring more money to a certain kind of movie but can potentially doom the revenue of other kinds of movies. Finally, we will show the effect of other top-selling movies on movies in the same period. The dataset we use, CMU Movie Summary Corpus, contains 81741 movies and 39088 of them have a plot. Among the 39088 movies, 10306 of them have revenue data after our data completion. We conduct our analysis on those 39088 movies and draw conclusions from those movies that have revenue data.
 
 First, let's look at the overall annual average revenue of movies, to have a rough glance at the development movie industry.
-<center>
+
+<figure>
+  <center>
     <img src="./images/Overall_average.png" width="600" height="600" style="vertical-align:middle">
-</center>
+    <figcaption>Error bar: 95 CI.</figcaption>
+  </center>
+</figure>
+
 We can see that the average annual revenue of the film industry has increased over time (good to hear this!), reflecting the thriving development of the film industry and the enhancement of people's purchasing power.
 
 
@@ -39,11 +44,13 @@ To see whether the revenue of movies can be affected by its topic, we first visu
 
 Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compact CIs than topic 4. Looking at topics 13 and 18, they are all about "kill, fight, attack, destroy, escape", and all of them are events that we rarely encounter in our daily life. We assume that people are willing to buy tickets for those kinds of movies because 1) Routine life sometimes is boring and people needs some excitement, and 2) The development of special effects creation in cinemagraphs make the expressiveness of those kinds of movies increase a lot while barely changing the movies with topics 15, 1, which are narrative movies about "interview" (topic 15) or "story" (topic 1). The two reasons can also explain why the aforementioned two topics, 15 & 1, have bad sales in average. 
 
-***Tips for filmmaker: Want to make more money? First make sure your movie topic is related to "kill, fight, attack, destroy, escape"!***
+***Those blockbusters typically contain "kill, fight, attack, destroy, escape" in their topics!***
 
 ### 1.3 What are the keywords in the plot of each movie?
 
-While topics 
+While topics provide a top-down view of all movie plots, it remains unclear whether we can group movie plots in a bottom-up manner, namely first looking at the important information in each movie plot and then trying to identify patterns in the collected important information. First, we define the **important information** in movie plots as **keywords**. We use KeyBERT to extract all unigram, bigram, and trigram keywords in each movie plot and turn each token in the extracted keywords into a pre-trained word vector. The sum of all keyword vectors then represents all the important information we summarize from a movie plot. We define the sum of all keyword vectors of a movie as **KeySum**. We then use K-Means to cluster those KeySum into 17 clusters. Visualization of 10 of 17 KeySum clusters (to avoid clutter) is given below (reduce dimensionality to 2 for visualization using t-SNE). 
+
+
 
 <video width="320" height="240" controls>
   <source src="./images/topic.mp4" type="video/mp4">
