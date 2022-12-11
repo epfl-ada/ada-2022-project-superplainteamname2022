@@ -39,15 +39,20 @@ To see whether the revenue of movies can be affected by its topic, we first visu
 
 
 <div>
+    
     <figure>
-        <img src="./images/topic_revenue_average.png">
+        <center>
+        <img src="./images/topic_revenue_average.png" width = 200 height = 200>
         <figcaption>Error bar: 95 CI.</figcaption>
+        </center>
     </figure>
 </div>
 <div>
     <figure>
-        <img src="./images/heatmap_topic_id.png">
-        <figcaption>All differences are significant (p &lt; 0.05).</figcaption>
+        <center>
+        <img src="./images/heatmap_topic_id.png" width = 300 height = 200>
+        <figcaption>All differences (except 0) are significant (p &lt; 0.05).</figcaption>
+        </center>
     </figure>
 </div>
 
@@ -80,10 +85,28 @@ Different topics appear in the same keyword cluster, supporting our seperated an
 We also visualize 15 top-frequent tokens in each keyword cluster, similar to the visualization of topics, to look into each cluster of what words are in it. 
 
 <center>
-  <img src="./images/keyword_vis.png" alt="" width="700" height="700" style="vertical-align:middle">
+  <img src="./images/keyword_vis.png" alt="" width="800" height="500" style="vertical-align:middle">
 </center>
 
-The frequent word in topic modeling, such as "kill, "
+The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. Finally, we can investigate whether 
+
+<div>
+    
+    <figure>
+        <center>
+        <img src="./images/keyword_revenue.png" width = 200 height = 200>
+        <figcaption>Error bar: 95 CI.</figcaption>
+        </center>
+    </figure>
+</div>
+<div>
+    <figure>
+        <center>
+        <img src="./images/heatmap_keyword_cluster_id.png" width = 300 height = 200>
+        <figcaption>All differences (except 0) are significant (p &lt; 0.05).</figcaption>
+        </center>
+    </figure>
+</div>
 
 <video width="320" height="240" controls>
   <source src="./images/topic.mp4" type="video/mp4">
