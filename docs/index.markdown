@@ -36,10 +36,14 @@ Topics are different from each other. For example, topic 13 contains some negati
 To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. 
 
 <figure>
-  <img src="./images/topic_revenue_average.png" alt="Error bar: 95 CI" style="width:50%">
-  <figcaption>Error bar: 95 CI.</figcaption>
-  <img src="./images/heatmap_topic_id.png" alt="All differences are significant (p<0.05)" style="width:50%">
-  <figcaption>All differences are significant (p &lt; 0.05).</figcaption>
+  <center>
+    <img src="./images/topic_revenue_average.png" alt="Error bar: 95 CI" style="width:50%">
+    <figcaption>Error bar: 95 CI.</figcaption>
+  </center>
+  <center>
+    <img src="./images/heatmap_topic_id.png" alt="All differences are significant (p<0.05)" style="width:50%">
+    <figcaption>All differences are significant (p &lt; 0.05).</figcaption>
+  </center>
 </figure>
 
 Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compact CIs than topic 4. Looking at topics 13 and 18, they are all about "kill, fight, attack, destroy, escape", and all of them are events that we rarely encounter in our daily life. We assume that people are willing to buy tickets for those kinds of movies because 1) Routine life sometimes is boring and people needs some excitement, and 2) The development of special effects creation in cinemagraphs make the expressiveness of those kinds of movies increase a lot while barely changing the movies with topics 15, 1, which are narrative movies about "interview" (topic 15) or "story" (topic 1). The two reasons can also explain why the aforementioned two topics, 15 & 1, have bad sales in average. 
@@ -48,9 +52,9 @@ Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compac
 
 ### 1.3 What are the keywords in the plot of each movie?
 
-While topics provide a top-down view of all movie plots, it remains unclear whether we can group movie plots in a bottom-up manner, namely first looking at the important information in each movie plot and then trying to identify patterns in the collected important information. First, we define the **important information** in movie plots as **keywords**. We use KeyBERT to extract all unigram, bigram, and trigram keywords in each movie plot and turn each token in the extracted keywords into a pre-trained word vector. The sum of all keyword vectors then represents all the important information we summarize from a movie plot. We define the sum of all keyword vectors of a movie as **KeySum**. We then use K-Means to cluster those KeySum into 17 clusters. Visualization of 10 of 17 KeySum clusters (to avoid clutter) is given below (reduce dimensionality to 2 for visualization using t-SNE). 
+While topics provide a top-down view of all movie plots, it remains unclear whether we can group movie plots in a bottom-up manner, namely first looking at the important information in each movie plot and then trying to identify patterns in the collected important information. First, we define the **important information** in movie plots as **keywords**. We use KeyBERT to extract all unigram, bigram, and trigram keywords in each movie plot and turn each token in the extracted keywords into a pre-trained word vector. The sum of all keyword vectors then represents all the important information we summarize from a movie plot, defined as **KeySum**. We then use K-Means to cluster those KeySum into 17 clusters. Visualization of 10 of 17 KeySum clusters (to avoid clutter) is given below (reduce dimensionality to 2 for visualization using t-SNE). 
 
-
+Clear patterns can be seen from clusters of KeySum. 
 
 <video width="320" height="240" controls>
   <source src="./images/topic.mp4" type="video/mp4">
