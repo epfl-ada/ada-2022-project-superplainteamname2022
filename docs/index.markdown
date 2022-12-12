@@ -35,21 +35,19 @@ Topics are different from each other. For example, topic 13 contains some negati
 
 ### 1.2 Is the movie revenue in each topic group different from each other?
 
-To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. 
+To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. Here, we first visualize the average revenue in each topic group and then quantify the difference in a heatmap, with all values significant (p<0.05, 0 value means non-significant comparison).
+
+<figure>
+    <center>
+    <img class="average" src="./images/topic_revenue_average.png" width = 500 height = 500>
+    <figcaption>Error bar: 95 CI.</figcaption>
+    </center>
+</figure>
 
 <div>
+    <center>
     <iframe src="./images/topic_id.html" width="700" height="700"></iframe> 
-</div>
-
-<div style="width:1000px">
-<figure class="left" style="float:left">
-    <img class="average" src="./images/topic_revenue_average.png" width = 450 height = 450>
-    <figcaption>Error bar: 95 CI.</figcaption>
-</figure>
-<figure class="right" style="float:right">
-    <img class="average" src="./images/heatmap_topic_id.png" width = 450 height = 350>
-    <figcaption>All differences (except 0) are significant (p &lt; 0.05).</figcaption>
-</figure>
+    </center>
 </div>
 
 Topics 4, 13 and 18 stand out on this figure and topics 13 & 18 have more compact CIs than topic 4. Looking at topics 13 and 18, they are all about "kill, fight, attack, destroy, escape", and all of them are events that we rarely encounter in our daily life. We assume that people are willing to buy tickets for those kinds of movies because 1) Routine life sometimes is boring and people needs some excitement, and 2) The development of special effects creation in cinemagraphs make the expressiveness of those kinds of movies increase a lot while barely changing the movies with topics 15, 1, which are narrative movies about "interview" (topic 15) or "story" (topic 1). The two reasons can also explain why the aforementioned two topics, 15 & 1, have bad sales in average. 
@@ -82,25 +80,22 @@ We also visualize 15 top-frequent tokens in each keyword cluster, similar to the
   <img src="./images/keyword_vis.png" alt="" width="800" height="350" style="vertical-align:middle">
 </center>
 
-The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. Finally, we can investigate whether 
+The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. Finally, we can investigate whether the revenues are different in different KeySum groups. Similar to analysis of topic groups, we first qualitatively visualize the KeySum group average and then do the quantification. 
+
+
+<figure>
+    <center>
+    <img class="average" src="./images/keyword_revenue.png" width = 500 height = 500>
+    <figcaption>Error bar: 95 CI.</figcaption>
+    </center>
+</figure>
 
 <div>
-    
-    <figure>
-        <center>
-        <img src="./images/keyword_revenue.png" width = 200 height = 200>
-        <figcaption>Error bar: 95 CI.</figcaption>
-        </center>
-    </figure>
+    <center>
+    <iframe src="./images/keyword_cluster_id.html" width="700" height="700"></iframe> 
+    </center>
 </div>
-<div>
-    <figure>
-        <center>
-        <img src="./images/heatmap_keyword_cluster_id.png" width = 300 height = 200>
-        <figcaption>All differences (except 0) are significant (p &lt; 0.05).</figcaption>
-        </center>
-    </figure>
-</div>
+
 
 <video width="320" height="240" controls>
   <source src="./images/topic.mp4" type="video/mp4">
