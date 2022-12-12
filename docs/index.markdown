@@ -37,7 +37,14 @@ Topics are different from each other. For example, topic 13 contains some negati
 
 To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. 
 
-<div w3-include-html="./docs/images/file.html"></div>
+<div>
+    <iframe src="./images/test.html" width="100%" height="300"></iframe> 
+</div>
+
+<div>                        
+    <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>           <script src="part1.js"></script>
+    <script type="text/javascript"></script>                <div id="86a088aa-4646-49f4-a731-3efd2aef5c57" class="plotly-graph-div" style="height:100%; width:100%;"></div>                <script src="part2.js"></script>            </div>
+
 
 <div style="width:1000px">
 <figure class="left" style="float:left">
