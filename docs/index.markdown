@@ -77,7 +77,7 @@ Different topics appear in the same keyword cluster, supporting our seperated an
 We also visualize 15 top-frequent tokens in each keyword cluster, similar to the visualization of topics, to look into each cluster of what words are in it. 
 
 <center>
-  <img src="./images/keyword_vis.png" alt="" width="800" height="350" style="vertical-align:middle">
+  <img src="./images/keyword_vis.png" alt="" width="800" height="550" style="vertical-align:middle">
 </center>
 
 The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. Finally, we can investigate whether the revenues are different in different KeySum groups. Similar to analysis of topic groups, we first qualitatively visualize the KeySum group average and then do the quantification. 
