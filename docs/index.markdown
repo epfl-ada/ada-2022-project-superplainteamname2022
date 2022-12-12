@@ -38,11 +38,11 @@ Topics are different from each other. For example, topic 13 contains some negati
 To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. 
 <div style="width:1000px">
 <figure class="left" style="float:left">
-    <img src="./images/topic_revenue_average.png" width = 200 height = 200>
+    <img class="average" src="./images/topic_revenue_average.png" width = 200 height = 200>
     <figcaption>Error bar: 95 CI.</figcaption>
 </figure>
 <figure class="right" style="float:right">
-    <img src="./images/heatmap_topic_id.png" width = 300 height = 200>
+    <img class="average" src="./images/heatmap_topic_id.png" width = 300 height = 200>
     <figcaption>All differences (except 0) are significant (p &lt; 0.05).</figcaption>
 </figure>
 </div>
