@@ -41,11 +41,11 @@ To see whether the revenue of movies can be affected by its topic, we first visu
 
 <div style="width:1000px">
 <figure class="left" style="float:left">
-    <img class="average" src="./images/topic_revenue_average.png" width = 500 height = 500>
+    <img class="average" src="./images/topic_revenue_average.png" width = 450 height = 450>
     <figcaption>Error bar: 95 CI.</figcaption>
 </figure>
 <figure class="right" style="float:right">
-    <img class="average" src="./images/heatmap_topic_id.png" width = 500 height = 350>
+    <img class="average" src="./images/heatmap_topic_id.png" width = 450 height = 350>
     <figcaption>All differences (except 0) are significant (p &lt; 0.05).</figcaption>
 </figure>
 </div>
