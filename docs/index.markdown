@@ -122,7 +122,38 @@ Finally, we can investigate whether the revenues are different in different KeyS
 
 Two salient KeySum clusters appear, i.e., cluster 6 and 10. The word "train", in cluster 6, is not a noun but a verb. Why is that? Let us explain via two examples. `Star Wars Episode I`, `The Avengers` and other movies that are about a group of people to be trained are in that cluster (`Star Wars Episode I`, trained to be Jedi; `The Avengers`, a group of superhero is trained to form an organization). Cluster 10 is more easy to comprehend (Sci-Fi-like keywords!). We assume that people expect the growth of the characters (that's why they need to be trained), even if they are already strong individuals, rather than watching a superhero being invincible for two hours (typical movie length!). Moreover, like we have expected, the sci-fi-related keywords are preferred by audience. Movies in cluster 10: `Avatar`, `Transformers: Dark of the Moon`, `Spider-Man 3`, etc. 
 
+However, we also notice several worse-selling KeySum clusters, such as 1,3,5,16. Looking at the keywords, they are all about some daily routine plots. Especially all the keywords in cluster 1, are about soap operas. We are not saying that these kinds of movies are bad, because movies like `There's Something About Mary`, `Shakespeare in Love` are in these clusters. However, we do claim that including those words in the movie plots cannot bring you much revenue! 
+
 ***The keywords in those blockbusters' plots are often related to "a group of people being trained" and Sci-Fi-related words like "aliens, scientist"!***
+
+### 1.5 Are movies of different genres share the boost-selling tricks for writing the plots?
+
+So far, we have come up with several suggestions on how to make a movie plot to help the movie earn more money, and how to avoid things in the plot that might undermine the movie revenue. However, a commonsense would be that  A question now would be, do movies of all genres share those suggestions? To answer it, we want to quantify the overlapping between top-selling topics and KeySum in each genre, and the overall top-selling topics and KeySum clusters. We propose to use Jaccard index to quantify the distance between two lists of indices, where indices can be topic id or KeySum cluster id. First, let's look at the topics.
+
+#### 1.5.1 Quantifying the overlap between overall top-selling/worse-selling topics and those in different movie genres. 
+
+We first extract top-10 top-selling and low-selling topics overall (10 topics are 40% of all topics, which can be regarded as top-selling ones). Then, for all movies belonging to each genre, we also extract top-10 topics similarly. We plot the Jaccard distance between those top-10 topics in each genre and the overall one.
+
+<center>
+  <img src="./images/overlap_topic.png" alt="" width="800" height="400">
+</center>
+
+The first thing to notice is that some of the Jaccard indexes are too high, like why does the genre "Comedy" need topics in 4, 18, 13 (contains "kill, fight" etc.)? The reason is that the movie genre is quite loose. For example, if an Adventure movie contains some has some comedic elements, it will belong to Comedy genre (`Pirates of the Caribbean: At World's End` is both Adventure and Comedy!). This phenomenon reflect that introducing comedic elements into movies related to "kill, fight, attack" can also bring more revenue.
+
+In the top-selling part, we observe that "Documentary", "Indie", "Crime Fiction" overlap not so much with the overall topic-selling trend, while in the low-selling part, the weird genres become "Documentary" and "Indie". Little overlapping indicates that movies in these genres cannot adopt our suggestions, and need specific treatment. We further extract the top-selling and low-selling topic ids in those movie genres, and **exclude** the overall top-selling and low-selling topics, to provide more specific guidance for what should those movies include in the plots.
+
+| Movie Genre     | Top-selling Topics | Low-selling Topics |
+|-----------------|--------------------|--------------------|
+| Crime Fiction   | 24, 8, 17, 6       | 11                 |
+| Documentary     | 3, 7, 15, 24       | 9, 6, 17, 22, 8, 13|
+
+We observe that for Crime Fiction, it seems a bit weird that the top-selling topics include some topics that are not related to "Crime", namely 24 and 17. That's because the movie plots focus more on the background of crimes instead of the crime itself, like movie `Sister Act` and `Dangerous Minds`. For Documentary, as we have expected, this kind of movie needs to be as realistic as possible to attract people, and that's why topic 7,15,24 can bring more revenue to Documentary. Moreover, people need some documentaries on crimes for society to learn a lesson, and this is why topic 3 is in top-selling topics in documentary (e.g.,`Crime After Crime`). However, some documentaries about war or other heavy topics in real world might cause oppressive atmosphere and make people not want to watch the movie, like `Into Eternity`. That's why topic 13, 8 etc are in the low-selling topics in Documentary. 
+
+#### 1.5.2 Quantifying the overlap between overall top-selling/worse-selling KeySum clusters and those in different movie genres. 
+
+
+### 1.6 Are the ranking of revenues of topic and KeySum groups constant through time?
+
 
 
 <video width="320" height="240" controls>
