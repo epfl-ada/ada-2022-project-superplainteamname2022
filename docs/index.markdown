@@ -9,6 +9,16 @@ The box office revenue of a movie is one of the most critical measurements of it
 
 First, let's look at the overall annual average revenue of movies, to have a rough glance at the development movie industry.
 
+
+<div>
+    <figure>
+    <center>
+    <iframe src="./images/Overall_average.html" width="700" height="700"></iframe> 
+    </center>
+    <figcaption>Error bar: 95 CI.</figcaption>
+    </figure>
+</div>
+
 <figure>
   <center>
     <img src="./images/Overall_average.png" width="600" height="600" style="vertical-align:middle">
@@ -46,7 +56,13 @@ To see whether the revenue of movies can be affected by its topic, we first visu
 
 <div>
     <center>
-    <iframe src="./images/topic_id.html" width="700" height="700"></iframe> 
+    <iframe src="./images/topic_revenue_average.html" width="500" height="500"></iframe> 
+    </center>
+</div>
+
+<div>
+    <center>
+    <iframe src="./images/topic_id.html" width="500" height="500"></iframe> 
     </center>
 </div>
 

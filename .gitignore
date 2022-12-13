@@ -10,5 +10,3 @@ data/GloVe/*.txt
 data/GloVe/*.zip
 data/MovieSummaries/*.tsv
 data/MovieSummaries/*.txt
-data/ldamodel/
-data/*.pkl
