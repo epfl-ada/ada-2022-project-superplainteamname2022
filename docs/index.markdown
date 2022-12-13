@@ -143,10 +143,12 @@ The first thing to notice is that some of the Jaccard indexes are too high, like
 In the top-selling part, we observe that "Documentary", "Indie", "Crime Fiction" overlap not so much with the overall topic-selling trend, while in the low-selling part, the weird genres become "Documentary" and "Indie". Little overlapping indicates that movies in these genres cannot adopt our suggestions, and need specific treatment. We further extract the top-selling and low-selling topic ids in those movie genres, and **exclude** the overall top-selling and low-selling topics, to provide more specific guidance for what should those movies include in the plots.
 
 <center>
+    
 | Movie Genre     | Top-selling Topics | Low-selling Topics |
-|-----------------|--------------------|--------------------|
+|:-----------------:|:--------------------:|:--------------------:|
 | Crime Fiction   | 24, 8, 17, 6       | 11                 |
 | Documentary     | 3, 7, 15, 24       | 9, 6, 17, 22, 8, 13|
+    
 </center>
 
 We observe that for Crime Fiction, it seems a bit weird that the top-selling topics include some topics that are not related to "Crime", namely 24 and 17. That's because the movie plots focus more on the background of crimes instead of the crime itself, like movie `Sister Act` and `Dangerous Minds`. For Documentary, as we have expected, this kind of movie needs to be as realistic as possible to attract people, and that's why topic 7,15,24 can bring more revenue to Documentary. Moreover, people need some documentaries on crimes for society to learn a lesson, and this is why topic 3 is in top-selling topics in documentary (e.g.,`Crime After Crime`). However, some documentaries about war or other heavy topics in real world might cause oppressive atmosphere and make people not want to watch the movie, like `Into Eternity`. That's why topic 13, 8 etc are in the low-selling topics in Documentary. 
@@ -160,11 +162,14 @@ Similar to the analysis for topics, we extract top-8-selling and low-8-selling (
 </center>
 
 <center>
+    
 | Movie Genre     | Top-selling KeySum Cluster | Low-selling KeySum Cluster |
-|-----------------|----------------------------|----------------------------|
+|:-----------------:|:----------------------------:|----------------------------:|
 | Documentary     | 4, 8, 16, 3                | 6, 0, 14, 2                |
 | Horror          | 5, 9, 3                    | 0, 11, 14, 8               |
+    
 </center>
+
 
 Again, Documentary appears! Similar to the aforementioned reasons, movies belonging to Documentary have different top/low-selling topics than others. Moreover, Horror movies have a different low-selling topics than the mainstream, indicating that filmmakers need to pay extra attention to those keywords in plots when making Horror movies. All those keywords are about the daily routine, which is hardly horrible.
 
