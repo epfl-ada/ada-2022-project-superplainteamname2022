@@ -83,7 +83,7 @@ While topics provide a top-down view of all movie plots, it remains unclear whet
   </center>
 </figure>
 
-Clear patterns can be seen from clusters of KeySum, supporting our claim that keywords can be used for another method than topics for grouping movie plots. However, one subtle point could be that keyword clustering just repeat what topic modeling does. To eliminate this doubt, we visualize the distribution of topic id in each keyword cluster
+Clear patterns can be seen from clusters of KeySum, supporting our claim that keywords can be used for another method than topics for grouping movie plots. However, one subtle point could be that keyword clustering just repeat what topic modeling does. To eliminate this doubt, we visualize the distribution of topic id in each keyword cluster.
 
 <figure>
   <center>
@@ -96,15 +96,19 @@ Different topics appear in the same keyword cluster, supporting our seperated an
 We also visualize 15 top-frequent tokens in each keyword cluster, similar to the visualization of topics, to look into each cluster of what words are in it. 
 
 <center>
-  <img src="./images/keyword_vis.png" alt="" width="800" height="550" style="vertical-align:middle">
+  <img src="./images/keyword_vis.png" alt="" width="800" height="450" style="vertical-align:middle">
 </center>
 
-The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. Finally, we can investigate whether the revenues are different in different KeySum groups. Similar to analysis of topic groups, we first qualitatively visualize the KeySum group average and then do the quantification. 
+The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. 
+
+### 1.4 Is the movie revenue in each KeySum cluster different from each other?
+
+Finally, we can investigate whether the revenues are different in different KeySum clusters. Similar to analysis of topic groups, we first qualitatively visualize the KeySum group average and then do the quantification. 
 
 <div>
     <figure>
     <center>
-        <iframe src="./images/keyword_revenue.html" width="300" height="250"></iframe> 
+        <iframe src="./images/keyword_revenue.html" width="600" height="500"></iframe> 
         <figcaption>Error bar: 95 CI.</figcaption>
     </center>
     </figure>
@@ -112,22 +116,13 @@ The frequent word in topic modeling, such as "kill" or "fight", have disappeared
 
 <div>
     <center>
-    <iframe src="./images/keyword_cluster_id.html" width="250" height="250"></iframe> 
+    <iframe src="./images/keyword_cluster_id.html" width="500" height="500"></iframe> 
     </center>
 </div>
 
-<!-- <figure>
-    <center>
-    <img class="average" src="./images/keyword_revenue.png" width = 500 height = 500>
-    <figcaption>Error bar: 95 CI.</figcaption>
-    </center>
-</figure>
+Two salient KeySum clusters appear, i.e., cluster 6 and 10. The word "train", in cluster 6, is not a noun but a verb. Why is that? Let us explain via two examples. `Star Wars Episode I`, `The Avengers` and other movies that are about a group of people to be trained are in that cluster (`Star Wars Episode I`, trained to be Jedi; `The Avengers`, a group of superhero is trained to form an organization). Cluster 10 is more easy to comprehend (Sci-Fi-like keywords!). We assume that people expect the growth of the characters (that's why they need to be trained), even if they are already strong individuals, rather than watching a superhero being invincible for two hours (typical movie length!). Moreover, like we have expected, the sci-fi-related keywords are preferred by audience. Movies in cluster 10: `Avatar`, `Transformers: Dark of the Moon`, `Spider-Man 3`, etc. 
 
-<div>
-    <center>
-    <iframe src="./images/keyword_cluster_id.html" width="700" height="700"></iframe> 
-    </center>
-</div> -->
+***The keywords in those blockbusters' plots are often related to "a group of people being trained" and Sci-Fi-related words like "aliens, scientist"!***
 
 
 <video width="320" height="240" controls>
