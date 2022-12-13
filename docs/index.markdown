@@ -14,17 +14,17 @@ First, let's look at the overall annual average revenue of movies, to have a rou
     <figure>
     <center>
     <iframe src="./images/Overall_average.html" width="700" height="700"></iframe> 
-    </center>
     <figcaption>Error bar: 95 CI.</figcaption>
+    </center>
     </figure>
 </div>
 
-<figure>
+<!-- <figure>
   <center>
     <img src="./images/Overall_average.png" width="600" height="600" style="vertical-align:middle">
     <figcaption>Error bar: 95 CI.</figcaption>
   </center>
-</figure>
+</figure> -->
 
 We can see that the average annual revenue of the film industry has increased over time (good to hear this!), reflecting the thriving development of the film industry and the enhancement of people's purchasing power.
 
@@ -47,17 +47,20 @@ Topics are different from each other. For example, topic 13 contains some negati
 
 To see whether the revenue of movies can be affected by its topic, we first visualize the average revenue in each topic group and then quantify the pair-wise differences between topic groups. Here, we first visualize the average revenue in each topic group and then quantify the difference in a heatmap, with all values significant (p<0.05, 0 value means non-significant comparison).
 
-<figure>
+<!-- <figure>
     <center>
     <img class="average" src="./images/topic_revenue_average.png" width = 500 height = 500>
     <figcaption>Error bar: 95 CI.</figcaption>
     </center>
-</figure>
+</figure> -->
 
 <div>
+    <figure>
     <center>
-    <iframe src="./images/topic_revenue_average.html" width="500" height="500"></iframe> 
+        <iframe src="./images/topic_revenue_average.html" width="600" height="500"></iframe> 
+        <figcaption>Error bar: 95 CI.</figcaption>
     </center>
+    </figure>
 </div>
 
 <div>
@@ -98,8 +101,22 @@ We also visualize 15 top-frequent tokens in each keyword cluster, similar to the
 
 The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. Finally, we can investigate whether the revenues are different in different KeySum groups. Similar to analysis of topic groups, we first qualitatively visualize the KeySum group average and then do the quantification. 
 
+<div>
+    <figure>
+    <center>
+        <iframe src="./images/keyword_revenue.html" width="300" height="250"></iframe> 
+        <figcaption>Error bar: 95 CI.</figcaption>
+    </center>
+    </figure>
+</div>
 
-<figure>
+<div>
+    <center>
+    <iframe src="./images/keyword_cluster_id.html" width="250" height="250"></iframe> 
+    </center>
+</div>
+
+<!-- <figure>
     <center>
     <img class="average" src="./images/keyword_revenue.png" width = 500 height = 500>
     <figcaption>Error bar: 95 CI.</figcaption>
@@ -110,7 +127,7 @@ The frequent word in topic modeling, such as "kill" or "fight", have disappeared
     <center>
     <iframe src="./images/keyword_cluster_id.html" width="700" height="700"></iframe> 
     </center>
-</div>
+</div> -->
 
 
 <video width="320" height="240" controls>
