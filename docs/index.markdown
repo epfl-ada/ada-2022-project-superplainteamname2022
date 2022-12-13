@@ -142,6 +142,13 @@ The first thing to notice is that some of the Jaccard indexes are too high, like
 
 In the top-selling part, we observe that "Documentary", "Indie", "Crime Fiction" overlap not so much with the overall topic-selling trend, while in the low-selling part, the weird genres become "Documentary" and "Indie". Little overlapping indicates that movies in these genres cannot adopt our suggestions, and need specific treatment. We further extract the top-selling and low-selling topic ids in those movie genres, and **exclude** the overall top-selling and low-selling topics, to provide more specific guidance for what should those movies include in the plots.
 
+<div align="center">
+    | Movie Genre     | Top-selling Topics | Low-selling Topics |
+    |:-----------------:|:--------------------:|:--------------------:|
+    | Crime Fiction   | 24, 8, 17, 6       | 11                 |
+    | Documentary     | 3, 7, 15, 24       | 9, 6, 17, 22, 8, 13|
+</div>
+
 <center>
     
 | Movie Genre     | Top-selling Topics | Low-selling Topics |
