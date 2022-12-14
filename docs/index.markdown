@@ -220,9 +220,9 @@ The order of y-axis is the overall ranking of different KeySum clusters. The fir
 
 ## Conclusion
 
-For the analysis of movie plot and movie revenues, We conduct several analysis on the relationship between key informations in movie plots and movie revenues. We identified several top-selling topics and sets of keywords that the movie plots should include, via group comparison and visualization. We also investigate whether different genres of movies have different dominating topics and keywords, and provide analysis and suggestions on those special genres. Moreover, we correlate the movie revenues with time, and successfully identified some rising stars in topics and keywords, but also outdated ones that filmmakers should avoid. 
+For answering the first question, i.e., what do those blockbusters have in their plots, we conduct several analysis on the relationship between key informations in movie plots and movie revenues. We identified several top-selling topics and sets of keywords that the movie plots should include, via group comparison and visualization. We also investigate whether different genres of movies have different dominating topics and keywords, and provide analysis and suggestions on those special genres. Moreover, we correlate the movie revenues with time, and successfully identified some rising stars in topics and keywords, but also outdated ones that filmmakers should avoid. 
 
-For the analysis of actors in movies,
+For answering the second question, namely actors,
 
 For the effect of other movies on a movie's revenue, 
 
