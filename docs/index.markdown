@@ -198,15 +198,17 @@ Cluster 7,11,12 are 3 rising KeySum clusters. They either include some critical 
 We have investigated the change of movie revenues in each topic and KeySum group. However, the comparison between those groups are only implicitly manifested in the figure. To explicitly see which topic or KeySum group is the winner at each time period, we synthesize a video of the average revenues in each topic and KeySum group. Interpolation of revenue data is used to make the video looks smoother, and this is why the year data has decimal point. First, let's look at topics. 
 
 <center>
-<video width="500" height="400" controls>
+<video width="700" height="600" controls>
   <source src="./images/topic.mp4" type="video/mp4">
 </video>
 </center>
 The order of the y-axis is the overall ranking of different topic groups. We can see that the overall top-3-selling topics are not the winner before 1990s. Before 1990s, topics 12,21,20,11 dominate in turn. Those topics are not about the topics that we suggest include in the plots but contain more daily imageries, like "family, friend, school, villege", etc. We assume that those things do not need special effects to show the underlying ideas of the movie but the top-selling topics all need. You cannot make "killing, attack" look realistic without advanced special effect techniques! This is why the overall top-3-selling topics did not perform well before 1990s. With the advent of good special effect techniques introduced in the 1990s, topic 4,13,18 start to chase and become the dominant (movie `Terminator 2`, `Titanic`, `Jurassic Park` use lots of special effects to tell the story, and all of them appear in the 1990s). 
 
-<video width="500" height="400" controls>
+<center>
+<video width="700" height="600" controls>
   <source src="./images/keyword.mp4" type="video/mp4">
 </video>
+</center>
 
 The order of y-axis is the overall ranking of different KeySum clusters. The first thing to notice is that cluster 0 dominated before the 1970s and becomes weaker and weaker after that, which meets the conclusion we claimed above in 1.6.1. Throughout the time after the 1970s, cluster 6,7,10,12 never lost against other clusters. The reason for clusters 6 and 10 to win are same as we mentioned in 1.4, that people expect expect the growth of the characters in the movie and sci-fi-related imageries. For 7 and 12, similar to what we analyzed in 1.6.1, critical turning-point-indicating words are always preferred! 
 
