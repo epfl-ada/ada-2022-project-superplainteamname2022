@@ -171,16 +171,49 @@ Again, Documentary appears! Similar to the aforementioned reasons, movies belong
 
 ***To filmmakers of Documentary, Horror, and Crime Fiction: Do not follow the crowd! Adopt genre-specific strategies!***
 
-### 1.6 Are the ranking of revenues of topic and KeySum groups constant through time?
+### 1.6 Is the average revenues of topic and KeySum groups unchanged through time?
 
+#### 1.6.1 What is the trend of revenue of each topic and KeySum group?
 
+While investigating the movie revenue throughout the whole time, we must notice that the trend in the movie industry might change with time. A question would be, what is the trend of revenue in each topic and KeySum group? Again, let's begin with the topics. We visualize the average revenue every 5 years for each topic, and build a regression model with time as independent variable and revenue as dependent variable to quantify the trend in each topic. 
 
-<video width="320" height="240" controls>
+<center>
+  <img src="./images/topic_time.png" alt="" width="800" height="800">
+</center>
+
+All the figures with a regression line have a significant coefficient for the independent variable "time", whereas the ones without do not. We observe that topics 4,13,18 have the most salient growing trend among all topics, and the three topics are exactly the same as we found in the overall top-3-selling topics. Hence, we not only demonstrated that those 3 topics are all money-making ones on average but also showed that they have an increasing trend in revenue, indicating that those 3 topics are excellent investment directions. We have talked about topic 13 and 18 before, but haven't introduced topic 4. It is related to adventure and action type of movies that focus on sailing, like pirate, island and other imageries that are related to sailing. Apart from these top-3 topics, we also notice that topics 12, 16, 22 have a large and significant growing trend, indicating that those 3 topics are rising stars in movie industry. Great movies like `Despicable Me` (topic 12), `The Da Vinci Code` (topic 16), `The Last Samurai` (topic 22) appear. 
+
+Similarly, let's see what happens in the KeySum clusters. 
+
+<center>
+  <img src="./images/keyword_time.png" alt="" width="800" height="800">
+</center>
+
+KeySum clusters 6 and 10 stand out from the figure. However, the third best-selling KeySum cluster, 0, is not increasing with time. Looking at that figure, we even can identify a decreasing trend recently. This shows that cluster 0's overall success attributes to its past but not present, and thus making movies with keywords in cluster 0 in the plots is not a good option. 
+
+Cluster 7,11,12 are 3 rising KeySum clusters. They either include some critical turning-point-indicating words like "murder, die, attack" (7, 12) or some imageries that are not so common (at least to us ordinary people) like "drive, gang". Here drive is not driving a normal car but more in a racing manner, such as movie `Cars`.  
+
+#### 1.6.2 Comparison of movie revenues of different topic or KeySum groups through time 
+
+We have investigated the change of movie revenues in each topic and KeySum group. However, the comparison between those groups are only implicitly manifested in the figure. To explicitly see which topic or KeySum group is the winner at each time period, we synthesize a video of the average revenues in each topic and KeySum group. Interpolation of revenue data is used to make the video looks smoother, and this is why the year data has decimal point. First, let's look at topics. 
+
+<video width="500" height="400" controls>
   <source src="./images/topic.mp4" type="video/mp4">
 </video>
 
-<video width="320" height="240" controls>
+The order of y-axis is the overall ranking of different topic groups. We can see that the overall top-3-selling topics are not the winner before 1990s. 
+
+<video width="500" height="400" controls>
   <source src="./images/keyword.mp4" type="video/mp4">
 </video>
+
+The order of y-axis is the overall ranking of different KeySum clusters.
+
+## Question 2 Actor
+
+## Question 3 Other movies
+
+## Conclusion
+
 
 
