@@ -96,7 +96,7 @@ Different topics appear in the same keyword cluster, supporting our seperated an
 We also visualize 15 top-frequent tokens in each keyword cluster, similar to the visualization of topics, to look into each cluster of what words are in it. 
 
 <center>
-  <img src="./images/keyword_vis.png" alt="" width="800" height="400">
+  <img src="./images/keyword_vis.png" alt="" width="700" height="350">
 </center>
 
 The frequent word in topic modeling, such as "kill" or "fight", have disappeared in keyword analysis, which proves once again that topics and keywords are different from each other. 
