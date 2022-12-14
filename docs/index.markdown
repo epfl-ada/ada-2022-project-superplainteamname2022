@@ -65,7 +65,7 @@ To see whether the revenue of movies can be affected by its topic, we first visu
 
 <div>
     <center>
-    <iframe src="./images/topic_id.html" width="500" height="500"></iframe> 
+    <iframe src="./images/topic_id.html" width="600" height="600"></iframe> 
     </center>
 </div>
 
@@ -116,7 +116,7 @@ Finally, we can investigate whether the revenues are different in different KeyS
 
 <div>
     <center>
-    <iframe src="./images/keyword_cluster_id.html" width="500" height="500"></iframe> 
+    <iframe src="./images/keyword_cluster_id.html" width="600" height="600"></iframe> 
     </center>
 </div>
 
