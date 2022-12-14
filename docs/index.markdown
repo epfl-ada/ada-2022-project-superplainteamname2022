@@ -175,7 +175,7 @@ Again, Documentary appears! Similar to the aforementioned reasons, movies belong
 
 #### 1.6.1 What is the trend of revenue of each topic and KeySum group?
 
-While investigating the movie revenue throughout the whole time, we must notice that the trend in the movie industry might change with time. A question would be, what is the trend of revenue in each topic and KeySum group? Again, let's begin with the topics. We visualize the average revenue every 5 years for each topic, and build a regression model with time as independent variable and revenue as dependent variable to quantify the trend in each topic. 
+While investigating the movie revenue throughout the whole time, we must be aware that the trend in the movie industry might change with time. A question would be, what is the trend of revenue in each topic and KeySum group? Again, let's begin with the topics. We visualize the average revenue every 5 years for each topic, and build a regression model with time as independent variable and revenue as dependent variable to quantify the trend in each topic. 
 
 <center>
   <img src="./images/topic_time.png" alt="" width="800" height="800">
@@ -197,17 +197,20 @@ Cluster 7,11,12 are 3 rising KeySum clusters. They either include some critical 
 
 We have investigated the change of movie revenues in each topic and KeySum group. However, the comparison between those groups are only implicitly manifested in the figure. To explicitly see which topic or KeySum group is the winner at each time period, we synthesize a video of the average revenues in each topic and KeySum group. Interpolation of revenue data is used to make the video looks smoother, and this is why the year data has decimal point. First, let's look at topics. 
 
+<center>
 <video width="500" height="400" controls>
   <source src="./images/topic.mp4" type="video/mp4">
 </video>
-
-The order of y-axis is the overall ranking of different topic groups. We can see that the overall top-3-selling topics are not the winner before 1990s. 
+</center>
+The order of the y-axis is the overall ranking of different topic groups. We can see that the overall top-3-selling topics are not the winner before 1990s. Before 1990s, topics 12,21,20,11 dominate in turn. Those topics are not about the topics that we suggest include in the plots but contain more daily imageries, like "family, friend, school, villege", etc. We assume that those things do not need special effects to show the underlying ideas of the movie but the top-selling topics all need. You cannot make "killing, attack" look realistic without advanced special effect techniques! This is why the overall top-3-selling topics did not perform well before 1990s. With the advent of good special effect techniques introduced in the 1990s, topic 4,13,18 start to chase and become the dominant (movie `Terminator 2`, `Titanic`, `Jurassic Park` use lots of special effects to tell the story, and all of them appear in the 1990s). 
 
 <video width="500" height="400" controls>
   <source src="./images/keyword.mp4" type="video/mp4">
 </video>
 
-The order of y-axis is the overall ranking of different KeySum clusters.
+The order of y-axis is the overall ranking of different KeySum clusters. The first thing to notice is that cluster 0 dominated before the 1970s and becomes weaker and weaker after that, which meets the conclusion we claimed above in 1.6.1. Throughout the time after the 1970s, cluster 6,7,10,12 never lost against other clusters. The reason for clusters 6 and 10 to win are same as we mentioned in 1.4, that people expect expect the growth of the characters in the movie and sci-fi-related imageries. For 7 and 12, similar to what we analyzed in 1.6.1, critical turning-point-indicating words are always preferred! 
+
+***Be careful about the outdated keywords in plots, and be bold on investing the rising star topics!***
 
 ## Question 2 Actor
 
@@ -215,5 +218,9 @@ The order of y-axis is the overall ranking of different KeySum clusters.
 
 ## Conclusion
 
+For the analysis of movie plot and movie revenues, We conduct several analysis on the relationship between key informations in movie plots and movie revenues. We identified several top-selling topics and sets of keywords that the movie plots should include, via group comparison and visualization. We also investigate whether different genres of movies have different dominating topics and keywords, and provide analysis and suggestions on those special genres. Moreover, we correlate the movie revenues with time, and successfully identified some rising stars in topics and keywords, but also outdated ones that filmmakers should avoid. 
 
+For the analysis of actors in movies,
+
+For the effect of other movies on a movie's revenue, 
 
