@@ -214,7 +214,8 @@ The order of y-axis is the overall ranking of different KeySum clusters. The fir
 
 ***Be careful about the outdated keywords in plots, and be bold on investing the rising star topics!***
 
-## Question 2 Actor
+## Question 2 Do actors only good at performing movies with certain plot content?
+
 
 ## Question 3 Other movies
 
