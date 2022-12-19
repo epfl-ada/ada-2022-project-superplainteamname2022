@@ -216,6 +216,21 @@ The order of y-axis is the overall ranking of different KeySum clusters. The fir
 
 ## Question 2 Do actors only good at performing movies with certain plot content?
 
+A well-known thing is that some actors are perfect fit for certain kinds of movies, but they might doom other kinds of movies due to their own profiles (imagine Schwarzenegger or Dwayne Johnson in Love Film!). Can we identify those actors that are with specialty, namely only good at performing movies with certain plot content? 
+
+To answer this, we first reuse the two perspectives of movie plot content, i.e., topics and keywords. For each actor, we first extract the top-5-selling movies and low-5-selling ones, and compute the difference between the average revenues of those two groups. We define such a difference as the **range** of an actor, similar to the mathmatical definition of "range". To quantify the difference between the plots of those top-selling movies and low-selling ones, we propose to use the distance between word vectors in topics and keywords, to semantically measure how far is it from the plots of one group of movies to the other. Concretely, we sum all word vectors in all topics or keywords of a group of movies, obtaining the **topic-sum vector** and **keyword-sum vector** of a group of movies. Then, the cosine distance between the topic-sum and keyword-sum vectors becomes the distance between two groups of movie, and the cosine distance naturally becomes **topic-sum distance** and **keyword-sum distance**. We use such a metric to quantify the semantic distance between two groups of movies. We plot the two distances of an actor as well as the range of the actor. 
+
+<center>
+  <img src="./images/actor_spec.png" alt="" width="800" height="400">
+</center>
+
+We define an actor with topic-sum distance larger than 0.1 or keyword-sum distance larger than 0.08 as actors with specialty. We can see that many actors have a relatively large topic-sum distance or keyword-sum distance, and all those actors have a range roughly larger than 0.2 billion, which is quite a huge number in movie revenue. As a side effect, we also observe significant but not so strong correlations in both figures (R<sup>2</sup> 0.111, p < 0.001 for topic-sum distance, R<sup>2</sup> 0.143, p < 0.001 for keyword-sum distance), indicating that there is a small correlation between the semantic distance of movie plots and the movie revenue for all actors. However, a question would be that whether the defined distance metric really reflect what we human think. We pick four actors to visualize the words in their top-selling and low-selling movies. All the actors are actors with specialty.
+
+<center>
+  <img src="./images/actor_spec_word.png" alt="" width="800" height="800">
+</center>
+
+We can see that the words in top-selling part and low-selling part are different, such as "kill, destroy" vs. "friend, party" in "Robert Downey Jr.", "ship, island" vs. "love, father" in "Jack Black", etc. For example, we all know that Robert Downey Jr. is very good at performing Iron Man and some critics even highly praised him as "Real Tony Stark". And, certainly, his top-selling movies are `Iron Man` and `Avengers`, which are all about performing Tony Stark. However, his low-selling movies include `Friends and Lovers`, `Two Girls and a Guy` and other Love Film, indicating that he is not good at performing screen couple. 
 
 ## Question 3 Other movies
 
@@ -223,7 +238,7 @@ The order of y-axis is the overall ranking of different KeySum clusters. The fir
 
 For answering the first question, i.e., what do those blockbusters have in their plots, we conduct several analysis on the relationship between key informations in movie plots and movie revenues. We identified several top-selling topics and sets of keywords that the movie plots should include, via group comparison and visualization. We also investigate whether different genres of movies have different dominating topics and keywords, and provide analysis and suggestions on those special genres. Moreover, we correlate the movie revenues with time, and successfully identified some rising stars in topics and keywords, but also outdated ones that filmmakers should avoid. 
 
-For answering the second question, namely actors,
+For answering the second question, namely actor with specialty, we define the range of an actor as the difference of revenues in top-selling movies and low-selling ones, and try to find whether the movie plots of those top-selling and low-selling movies are semantically different. We reuse topics and keywords in part 1 and define topic-sum distance as well as keyword-sum distance to quantify the semantic distance between two groups of movies. We identified actors with specialty using those distance metrics and also discovered certain correlation between the movie semantic distance and the range of actors, indicating that actors in movies with different kinds of plots can either contribute or undermine the movie revenues. Finally, we visualize the words in top-selling topics and keywords as well as low-selling ones, to confirm the validity of our proposed distance metrics between movies.
 
 For the effect of other movies on a movie's revenue, 
 
