@@ -275,7 +275,7 @@ To analyse the impact on different genres, we also compared the revenue of *Wais
     </figure>
 </div>
 
-As illustrated in the figure above, one film could have several genres. The selected film with the monthly median revenue has negative gaps(illustrated with red bars) from the annual averages in all its 6 genres, which means it has a lower revenue compared to the average in all of its classified genres. 
+As illustrated in the figure above, one film could have several genres. The selected film with the monthly median revenue has negative gaps from the annual averages in all its 6 genres, which means it has a lower revenue compared to the average in all of its classified genres. 
 
 ### 3.5 Rule out the influence of released months
 
@@ -287,7 +287,7 @@ To rule out this potential influence, we also compare the revenue of our selecte
     <figure>
     <center>
         <iframe src="./images/Gap_from_annually_average_pre.html" width="600" height="500"></iframe> 
-        <figcaption>Gaps from the annually average revenue</figcaption>
+        <figcaption>Gaps from the monthly average revenue from previous year</figcaption>
     </center>
     </figure>
 </div>
@@ -296,7 +296,7 @@ To rule out this potential influence, we also compare the revenue of our selecte
     <figure>
     <center>
         <iframe src="./images/Gap_from_annually_next.html" width="600" height="500"></iframe> 
-        <figcaption>Gaps from the annually average revenue</figcaption>
+        <figcaption>Gaps from the monthly average revenue from next year</figcaption>
     </center>
     </figure>
 </div>
