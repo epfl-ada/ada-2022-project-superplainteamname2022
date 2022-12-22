@@ -232,7 +232,72 @@ We define an actor with topic-sum distance larger than 0.1 or keyword-sum distan
 
 We can see that the words in top-selling part and low-selling part are different, such as "kill, destroy" vs. "friend, party" in "Robert Downey Jr.", "ship, island" vs. "love, father" in "Jack Black", etc. For example, we all know that Robert Downey Jr. is very good at performing Iron Man and some critics even highly praised him as "Real Tony Stark". And, certainly, his top-selling movies are `Iron Man` and `Avengers`, which are all about performing Tony Stark. However, his low-selling movies include `Friends and Lovers`, `Two Girls and a Guy` and other Love Film, indicating that he is not good at performing screen couple. 
 
-## Question 3 Other movies
+## Question 3 External Factors: Do top blockbusters have any influence on the movies released in a close period?
+It cannot be denied that movies' inherent character dorminates their final revenues. Nevertheless, people tend to neglect that an inappropriate release date could be fatal to a movie despite its high quality. For example, Shazam got the 6th highest score among all DC movies in Rotten Tomato but still suffered from a terrible box office since it was released in the same month as Avengers: End Game. To analyse such impact, Let's first give a naive definition of top blockbusters
+
+### 3.1 What is a top blockbuster
+There is no quantitative definition about blockbuster given by the film industry. Therefore, we give a simple and clear definition of top blockbusters. We simply define them as the annual box office champions. However, based on their revenue, we can also refine the blockbusters to different levels(eg. With box office revenue higher than 1 billion,2 billion...)
+
+### 3.2 How do we define movies released in a close period with the top blockbusters
+Given some empirical knowledge about the historical box office, we give a preliminary definition for movies released in a close period with the top blockbusters: Movies that are released in the same month with the top blockbusters are considered to be released in a close period.
+
+### 3.3 Initial analysis
+We first made a null hypothesis that the top blockbusters don't have any influence on the movies released close to it, so that the average revenue of closely-released movies and non closely-released movies should be the same. We did a t-test on the movies released within the same month with the top blockbusters and the movies released within the same year but not the same month with the top blockbusters. The blockbuster selection standard and their corresponding blockbuster numbers and ratio of p value smaller than 0.05 are illustrated in the following table.
+
+| Blockbuster selection standard            | blockbuster numbers | ratio of p value smaller that 0.05 |
+|-------------------------------------------|---------------------|------------------------------------|
+| Annual revenue champion                   | 52                  | 0.19                               |
+| Movies with revenue higher than 1 billion | 13                  | 0.15                               |
+
+Based on the t-test, under most circumstances, the null hypothesis should be accepted, since only 15% - 19% of the selected blockbusters have a p_value smaller than 0.05. However, this conclusion could be inaccurate since comparing the average revenue is not enough. To conduct some further analysis, we select one blockbuster *Pirates of the Caribbean: Dead Man's Chest(2006)*. It has a positive statistic value(2.83) and a p_value less than 0.05. It seems to suggest that this perticular blockbuster has a positive influence on the movies released close to it. 
+
+**But is that really the case?**
+
+### 3.4 Further analysis
+Based on the previous analysis, we can see that the blockbusters don't have a significant influence on the closely-released movies on average. However, it could be the case that those movies' own quality offsets the influence brought by the blockbusters. Now, we want to rule out the influence from high-quality and low-quality films and analyse the blockbusters' impact on movies with a medium quality. Therefore, instead of using average revenues, we choose to use median revenues.
+
+We chose the movie with the median revenus from all the movies released in the same month with our selected blockbuster *Pirates of the Caribbean: Dead Man's Chest(2006)*. The chosen movie with median revenus is called *Waist Deep* and it has a revenue of 21344312 lower than the average revenue of the non closely-released movies(47450260). 
+
+To analyse the impact on different genres, we also compared the revenue of *Waist Deep* with the annual averages of all its genres. The results are demonstrated below.
+
+<div>
+    <figure>
+    <center>
+        <iframe src="./images/Gap_from_annually_average.html" width="600" height="500"></iframe> 
+        <figcaption>Gaps from the annually average revenue</figcaption>
+    </center>
+    </figure>
+</div>
+
+As illustrated in the figure above, one film could have several genres. The selected film with the monthly median revenue has negative gaps(illustrated with red bars) from the annual averages in all its 6 genres, which means it has a lower revenue compared to the average in all of its classified genres. 
+
+### 3.5 Rule out the influence of released months
+
+Hordes of film analysts, more often than not, tend to believe that movies released in different time of the year, even with close topic or genres, have considerably different possibility to reach a high revenue. One classic argument is that movies released between Halloween and Christmas have a much higher chance to get higher revenue than movie released during spring(March,April). One can easily finds tons of examples.(eg. *Frozen* vs *Monsters University*, *Spider-Man: No Way Home* vs *Black Widow*) 
+
+To rule out this potential influence, we also compare the revenue of our selected movie with the average revenue of movies from its genres that are released in the same month of the previous year and the next year. For example, since our selected movie *Waist Deep* is released in June,2006. We will compare its revenue to movies with the same genre that are released in June,2005 and June,2007. Mind that we also make sure that the blockbusters from previous year and next year in our case are not released in the same month from our selected movie
+
+<div>
+    <figure>
+    <center>
+        <iframe src="./images/Gap_from_annually_average_pre.html" width="600" height="500"></iframe> 
+        <figcaption>Gaps from the annually average revenue</figcaption>
+    </center>
+    </figure>
+</div>
+
+<div>
+    <figure>
+    <center>
+        <iframe src="./images/Gap_from_annually_next.html" width="600" height="500"></iframe> 
+        <figcaption>Gaps from the annually average revenue</figcaption>
+    </center>
+    </figure>
+</div>
+
+As we can see from the two figures above, the revenue of our selected movie *Waist Deep* is lower than the average revenue from same month previous year and next year in most of its genres. We can also notice that the seleted movie always shows only a positive gap in the genre **Gangster Film**. This might indicate that *Waist Deep* is a high quality movie in this specific genre, enabling it to overpower of negative influence of the top blockbuster.
+
+
 
 ## Conclusion
 
@@ -240,5 +305,5 @@ For answering the first question, i.e., what do those blockbusters have in their
 
 For answering the second question, namely actor with specialty, we define the range of an actor as the difference of revenues in top-selling movies and low-selling ones, and try to find whether the movie plots of those top-selling and low-selling movies are semantically different. We reuse topics and keywords in part 1 and define topic-sum distance as well as keyword-sum distance to quantify the semantic distance between two groups of movies. We identified actors with specialty using those distance metrics and also discovered certain correlation between the movie semantic distance and the range of actors, indicating that actors in movies with different kinds of plots can either contribute or undermine the movie revenues. Finally, we visualize the words in top-selling topics and keywords as well as low-selling ones, to confirm the validity of our proposed distance metrics between movies.
 
-For the effect of other movies on a movie's revenue, 
+For the effect of other movies on a movie's revenue, we analysed the influence of closely-released top blockbusters. The statistical analysis suggests that the impact of top blockbusters are not significant on average. This could be explained by the fact that the qualities of the movies themselves could offsets the influence of top blockbusters. Then we visualized a case with median revenue(medium quality) and it had a lower revenue than the annual average from the same year as well as the monthly averages from previous and next years in all its genres, which indicates that movies with medium quality tend to be affect negatively by closely released top blockbusters. 
 
