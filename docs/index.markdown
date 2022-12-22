@@ -214,7 +214,7 @@ The order of y-axis is the overall ranking of different KeySum clusters. The fir
 
 ***Be careful about the outdated keywords in plots, and be bold on investing the rising star topics!***
 
-## Question 2 Do actors only good at performing movies with certain plot content?
+## Question 2 Are actors only good at performing movies with certain plot content?
 
 A well-known thing is that some actors are perfect fit for certain kinds of movies, but they might doom other kinds of movies due to their own profiles (imagine Schwarzenegger or Dwayne Johnson in Love Film!). Can we identify those actors that are with specialty, namely only good at performing movies with certain plot content? 
 
