@@ -259,12 +259,6 @@ Based on the previous analysis, we can see that the blockbusters don't have a si
 We chose the movie with the median revenus from all the movies released in the same month with our selected blockbuster *Pirates of the Caribbean: Dead Man's Chest(2006)*. The chosen movie with median revenus is called *Waist Deep* and it has a revenue of 21344312 lower than the average revenue of the non closely-released movies(47450260). 
 
 To analyse the impact on different genres, we also compared the revenue of *Waist Deep* with the annual averages of all its genres. The results are demonstrated below.
-<div>
-    <center>
-    <iframe src="./images/Gap_from_annually_average.html" width="600" height="600"></iframe> 
-    </center>
-</div>
-
 
 <div>
     <figure>
