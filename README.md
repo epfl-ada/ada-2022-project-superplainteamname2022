@@ -88,12 +88,16 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 #### 7.1 Find movies released in a close period with the top blockbusters
 1. Extract movies that are released in the same month with the top blockbusters.
 
+#### 7.2 Do a statistical analysis on the average revenue of closely-released and non closely-released blockbusters
+1. Analyse the statistics and p values to see if the impact from top blockbusters is significant and try the find the reasons.
+
+#### 7.3 Analyse and visualize the influence of top blockbusters on closely-released movies with medium quality(median revenues)
+1. Deminish the influence of movies' own qualities
+
 #### 7.2 Rule out the influence of released months
 1. Compare the revenue of our selected movie with the average revenue of movies from its genres that are released in the same month of the previous year and the next year. 
 
-#### 7.3 Compare the revenue of our selected movies with its most similar movie
-1.   Compute Euclidean distance or cosine similarity between the word vector extracted in Part 1.
-2.   Merge the word vector and the other metadata of movies in a latent space and measured distance in that latent space, where the latent space can be obtained via autoencoder.
+
 
 ## Proposed timeline
 
