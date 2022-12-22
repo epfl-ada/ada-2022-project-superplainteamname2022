@@ -94,7 +94,7 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 #### 7.3 Analyse and visualize the influence of top blockbusters on closely-released movies with medium quality(median revenues)
 1. Deminish the influence of movies' own qualities
 
-#### 7.2 Rule out the influence of released months
+#### 7.4 Rule out the influence of released months
 1. Compare the revenue of our selected movie with the average revenue of movies from its genres that are released in the same month of the previous year and the next year. 
 
 
