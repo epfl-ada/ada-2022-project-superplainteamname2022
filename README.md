@@ -81,12 +81,7 @@ There are other revenue datasets like IMDB mojo and OpusData, but they are not f
 #### 6.1 Case study of actors with "specialty"
 
 1. Find the actors that have the highest average revenue (of movies that he/she is in) in one group but have the lowest in others. 
-2. Try to devise a reason for each actor with the situation described in (1).
-
-#### 6.2 Identify out-dated actors
-
-1. Find the actors that have a decreasing trend of average revenue of movies that he/she is in. 
-2. Correlate the change to the trend found in task 5.
+2. Quantify the distance between top-selling group and low-selling group of an actor and visualize it with the difference between the two groups of movies of an actor.
 
 ### 7. Build revenue relationship between top-selling movies and other movies in the same closed time period.
 
