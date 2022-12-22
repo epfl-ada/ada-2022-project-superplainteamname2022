@@ -269,8 +269,8 @@ To analyse the impact on different genres, we also compared the revenue of *Wais
 <div>
     <figure>
     <center>
-        <iframe src="./images/Gap_from_annually_average.html" width="600" height="500"></iframe> 
-        <figcaption>Gaps from the annually average revenue</figcaption>
+    <iframe src="./images/Gap_from_annually_average.html" width="600" height="500"></iframe> 
+    <figcaption>Gaps from the annually average revenue</figcaption>
     </center>
     </figure>
 </div>
@@ -286,8 +286,8 @@ To rule out this potential influence, we also compare the revenue of our selecte
 <div>
     <figure>
     <center>
-        <iframe src="./images/Gap_from_annually_average_pre.html" width="600" height="500"></iframe> 
-        <figcaption>Gaps from the monthly average revenue from previous year</figcaption>
+    <iframe src="./images/Gap_from_annually_average_pre.html" width="600" height="500"></iframe> 
+    <figcaption>Gaps from the monthly average revenue from previous year</figcaption>
     </center>
     </figure>
 </div>
@@ -295,8 +295,8 @@ To rule out this potential influence, we also compare the revenue of our selecte
 <div>
     <figure>
     <center>
-        <iframe src="./images/Gap_from_annually_next.html" width="600" height="500"></iframe> 
-        <figcaption>Gaps from the monthly average revenue from next year</figcaption>
+    <iframe src="./images/Gap_from_annually_next.html" width="600" height="500"></iframe> 
+    <figcaption>Gaps from the monthly average revenue from next year</figcaption>
     </center>
     </figure>
 </div>
